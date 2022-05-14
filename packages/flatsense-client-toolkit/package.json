@@ -2,7 +2,7 @@
   "name": "@flatsense/client-toolkit",
   "private": true,
   "version": "0.0.0",
-  "main": "src/index.ts",
+  "main": "dist/index.js",
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
