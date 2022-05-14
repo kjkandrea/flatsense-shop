@@ -1,4 +1,4 @@
-import { HelloText } from '../types';
+import { HelloText } from './types';
 
 export const getHelloWord = (): HelloText => 'Hello, flatsense! 🐶';
 

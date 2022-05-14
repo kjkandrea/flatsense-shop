@@ -1,9 +1,7 @@
 {
   "name": "@flatsense/client-api",
-  "private": true,
   "version": "0.0.0",
-  "main": "src/index.ts",
-  "types": "types/index.d.ts",
+  "main": "index.ts",
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
