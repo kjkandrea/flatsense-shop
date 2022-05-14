@@ -1,3 +1,5 @@
-import {HelloText} from "../types";
+import { HelloText } from '../types';
 
-export const sayHello = (helloText: HelloText = 'Hello, flatsense! 🐶') => console.log(helloText)
+export const getHelloWord = (): HelloText => 'Hello, flatsense! 🐶';
+
+export const sayHello = (helloText: HelloText) => console.log(helloText);
