@@ -8,7 +8,7 @@ function App() {
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
-        {getHelloWord()}
+        <h1 className="text-3xl font-bold underline">{getHelloWord()}</h1>
         <Counter />
         <p>
           Edit <code>App.jsx</code> and save to test HMR updates.
