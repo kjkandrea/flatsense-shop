@@ -1,0 +1,10 @@
+{
+  "name": "flatsense-shop",
+  "version": "0.0.0",
+  "description": "a flat sense shop",
+  "main": "index.ts",
+  "repository": "https://github.com/kjkandrea/flatsense-shop.git",
+  "author": "andrea, primavera",
+  "license": "GPL",
+  "private": true
+}
