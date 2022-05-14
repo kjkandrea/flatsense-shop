@@ -2,10 +2,17 @@ import logo from './logo.svg';
 import './App.css';
 import { getHelloWord } from '@flatsense/client-api';
 import Counter from '@flatsense/client-toolkit/src/components/Counter';
+import routes from './routes';
+import { useRoutes, BrowserRouter as Router } from 'react-router-dom';
+
+const AppRoutes = () => useRoutes(routes);
 
 function App() {
   return (
     <div className="App">
+      <Router>
+        <AppRoutes />
+      </Router>
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <h1 className="text-3xl font-bold underline">{getHelloWord()}</h1>
