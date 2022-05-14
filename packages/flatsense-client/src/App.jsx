@@ -1,21 +1,15 @@
-import { useState } from 'react';
 import logo from './logo.svg';
 import './App.css';
 import { getHelloWord } from '@flatsense/client-api';
+import Counter from '@flatsense/client-toolkit/src/components/Counter';
 
 function App() {
-  const [count, setCount] = useState(0);
-
   return (
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         {getHelloWord()}
-        <p>
-          <button type="button" onClick={() => setCount((count) => count + 1)}>
-            count is: {count}
-          </button>
-        </p>
+        <Counter />
         <p>
           Edit <code>App.jsx</code> and save to test HMR updates.
         </p>
