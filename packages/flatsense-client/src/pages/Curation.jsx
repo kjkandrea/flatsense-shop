@@ -3,7 +3,11 @@ import dummyProductThumbnail from '../assets/images/dummy-product-thumbnail.jpeg
 
 export default function Curation() {
   return (
-    <>
+    <div>
+      <div className="pt-1 pb-4">
+        <h2 className="text-base font-medium text-gray-900">Shoes</h2>
+        <p className="mt-1 text-sm text-gray-500">Awesome Shoes curation</p>
+      </div>
       <div className="grid grid-cols-1 gap-y-10 grid-cols-2 gap-x-4">
         {Array.from({ length: 10 }, (_, index) => index).map((key) => (
           <a href="#" className="group" key={key}>
@@ -19,6 +23,6 @@ export default function Curation() {
           </a>
         ))}
       </div>
-    </>
+    </div>
   );
 }
