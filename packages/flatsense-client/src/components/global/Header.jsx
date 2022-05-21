@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 export default function Header() {
   return (
     <header>
-      <nav className="flex items-center justify-between flex-wrap p-4 shadow">
+      <nav className="flex items-center justify-between flex-wrap p-4 shadow-sm">
         <div>
           <button>
             <svg
