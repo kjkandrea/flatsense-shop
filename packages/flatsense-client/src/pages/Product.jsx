@@ -1,18 +1,19 @@
 import React from 'react';
+import dummyProductThumbnail from '../assets/images/dummy-product-thumbnail.jpeg';
 
 export default function Product() {
   return (
     <div className="items-start justify-center">
       <div>
-        <img className="w-full" alt="image of a girl posing" src="https://i.ibb.co/QMdWfzX/component-image-one.png" />
-        <div className="flex items-center justify-between mt-3 space-x-4">
-          <img alt="image-tag-one" className="w-full" src="https://i.ibb.co/cYDrVGh/Rectangle-245.png" />
-          <img alt="image-tag-one" className="w-full" src="https://i.ibb.co/f17NXrW/Rectangle-244.png" />
-          <img alt="image-tag-one" className="w-full" src="https://i.ibb.co/cYDrVGh/Rectangle-245.png" />
-          <img alt="image-tag-one" className="w-full" src="https://i.ibb.co/f17NXrW/Rectangle-244.png" />
+        <img className="w-full" alt="shoes" src={dummyProductThumbnail} />
+        <div className="overflow-x-auto flex items-center mt-3 pb-3 pr-8 space-x-3" style={{ marginRight: '-2rem' }}>
+          <img alt="image-tag-one" className="sm:w-48 w-3/12" src={dummyProductThumbnail} />
+          <img alt="image-tag-one" className="sm:w-48 w-3/12" src={dummyProductThumbnail} />
+          <img alt="image-tag-one" className="sm:w-48 w-3/12" src={dummyProductThumbnail} />
+          <img alt="image-tag-one" className="sm:w-48 w-3/12" src={dummyProductThumbnail} />
         </div>
       </div>
-      <div className="mt-6">
+      <div className="mt-3">
         <div className="border-b border-gray-200 pb-6">
           <p className="text-sm leading-none text-gray-600 dark:text-gray-300 ">Balenciaga Fall Collection</p>
           <h1 className="lg:text-2xl text-xl font-semibold lg:leading-6 leading-7 text-gray-800 dark:text-white mt-2">
