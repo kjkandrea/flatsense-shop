@@ -4,7 +4,7 @@ import Footer from './components/global/Footer';
 
 export default function Layout({ children }) {
   return (
-    <div>
+    <div className="global-wrapper">
       <Header />
       {children}
       <Footer />
