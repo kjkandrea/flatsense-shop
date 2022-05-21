@@ -7,11 +7,11 @@ const AppRoutes = () => useRoutes(routes);
 
 function App() {
   return (
-    <Layout>
-      <Router>
+    <Router>
+      <Layout>
         <AppRoutes />
-      </Router>
-    </Layout>
+      </Layout>
+    </Router>
   );
 }
 

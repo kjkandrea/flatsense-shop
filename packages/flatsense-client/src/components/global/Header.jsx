@@ -1,5 +1,6 @@
 import React from 'react';
 import logo from '../../assets/images/dummy-logo.svg';
+import { Link } from 'react-router-dom';
 
 export default function Header() {
   return (
@@ -20,7 +21,9 @@ export default function Header() {
           </button>
         </div>
         <div>
-          <img className="w-28" src={logo} alt="dummy logo" />
+          <Link to="/">
+            <img className="w-28" src={logo} alt="dummy logo" />
+          </Link>
         </div>
         <div>
           <button>
