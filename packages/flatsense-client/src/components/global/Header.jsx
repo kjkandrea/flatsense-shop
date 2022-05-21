@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 export default function Header() {
   return (
     <header>
-      <nav className="flex items-center justify-between flex-wrap p-5 shadow">
+      <nav className="flex items-center justify-between flex-wrap p-4 shadow">
         <div>
           <button>
             <svg
@@ -22,7 +22,7 @@ export default function Header() {
         </div>
         <div>
           <Link to="/">
-            <img className="w-28" src={logo} alt="dummy logo" />
+            <img className="w-18" src={logo} alt="dummy logo" />
           </Link>
         </div>
         <div>
