@@ -21,23 +21,6 @@ export default function Product() {
           </h1>
         </div>
         <div className="py-4 border-b border-gray-200 flex items-center justify-between">
-          <p className="text-base leading-4 text-gray-800 dark:text-gray-300">Colours</p>
-          <div className="flex items-center justify-center">
-            <p className="text-sm leading-none text-gray-600 dark:text-gray-300">Smoke Blue with red accents</p>
-            <div className="w-6 h-6 bg-gradient-to-b from-gray-900 to-indigo-500 ml-3 mr-4 cursor-pointer"></div>
-            <img
-              className="dark:hidden"
-              src="https://tuk-cdn.s3.amazonaws.com/can-uploader/productDetail3-svg2.svg"
-              alt="next"
-            />
-            <img
-              className="hidden dark:block"
-              src="https://tuk-cdn.s3.amazonaws.com/can-uploader/productDetail3-svg2dark.svg"
-              alt="next"
-            />
-          </div>
-        </div>
-        <div className="py-4 border-b border-gray-200 flex items-center justify-between">
           <p className="text-base leading-4 text-gray-800 dark:text-gray-300">Size</p>
           <div className="flex items-center justify-center">
             <p className="text-sm leading-none text-gray-600 dark:text-gray-300 mr-3">38.2</p>
@@ -54,19 +37,6 @@ export default function Product() {
             />
           </div>
         </div>
-        <button className="dark:bg-white dark:text-gray-900 dark:hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-800 text-base flex items-center justify-center leading-none text-white bg-gray-800w-full py-4 hover:bg-gray-700 focus:outline-none">
-          <img
-            className="mr-3 dark:hidden"
-            src="https://tuk-cdn.s3.amazonaws.com/can-uploader/svg1.svg"
-            alt="location"
-          />
-          <img
-            className="mr-3 hidden dark:block"
-            src="https://tuk-cdn.s3.amazonaws.com/can-uploader/svg1dark.svg"
-            alt="location"
-          />
-          Check availability in store
-        </button>
         <div>
           <p className="xl:pr-48 text-base lg:leading-tight leading-normal text-gray-600 dark:text-gray-300 mt-7">
             It is a long established fact that a reader will be distracted by thereadable content of a page when looking
