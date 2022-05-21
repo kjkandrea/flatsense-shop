@@ -44,7 +44,7 @@ export default function Header() {
           </button>
         </div>
       </nav>
-      <hr className="border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
+      <hr className="border-gray-200 sm:mx-auto dark:border-gray-700" />
     </header>
   );
 }
