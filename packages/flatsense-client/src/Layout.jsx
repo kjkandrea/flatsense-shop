@@ -6,7 +6,7 @@ export default function Layout({ children }) {
   return (
     <div className="global-wrapper">
       <Header />
-      {children}
+      <div className="p-4">{children}</div>
       <Footer />
     </div>
   );
