@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 export default function Header() {
   return (
     <header>
-      <nav className="flex items-center justify-between flex-wrap p-4 shadow-sm">
+      <nav className="flex items-center justify-between flex-wrap p-4">
         <div>
           <button>
             <svg
@@ -44,6 +44,7 @@ export default function Header() {
           </button>
         </div>
       </nav>
+      <hr className="border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
     </header>
   );
 }
