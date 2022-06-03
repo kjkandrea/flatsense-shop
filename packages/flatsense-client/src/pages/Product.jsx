@@ -20,9 +20,27 @@ export default function Product() {
             Awesome Shoes
           </h1>
         </div>
-        <div className="flex md:block border-b border-gray-200 pb-6">
-          <div className="text-gray-900 text-lg font-semibold mr-2">$600.00</div>
-          <div className="text-gray-500 line-through text-lg font-semibold">$649.95</div>
+        <div className="flex md:block">
+          <div className="text-gray-900 text-lg font-semibold mr-2">$85</div>
+          <div className="text-gray-500 line-through text-lg font-semibold">$110</div>
+        </div>
+
+        <div className="mt-8">
+          <h3 className="mb-4 text-xl font-medium text-gray-900">Size</h3>
+          <div className="flex items-center flex-wrap gap-4">
+            <label htmlFor="option-Size-154">
+              <input className="sr-only" type="radio" id="option-Size-154" name="option[Size]" value="154" />
+              <div className="p-2 border cursor-pointer rounded text-sm md:text-md text-gray-900">240</div>
+            </label>
+            <label htmlFor="option-Size-158">
+              <input className="sr-only" type="radio" id="option-Size-158" name="option[Size]" value="158" />
+              <div className="p-2 border cursor-pointer rounded text-sm md:text-md text-gray-900">255</div>
+            </label>
+            <label htmlFor="option-Size-160">
+              <input className="sr-only" type="radio" id="option-Size-160" name="option[Size]" value="160" />
+              <div className="p-2 border cursor-pointer rounded text-sm md:text-md bg-gray-900 text-white">265</div>
+            </label>
+          </div>
         </div>
 
         <div>
