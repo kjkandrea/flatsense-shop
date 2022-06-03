@@ -1,5 +1,3 @@
-import { HelloText } from './types';
+import Client from 'shopify-buy';
 
-export const getHelloWord = (): HelloText => 'Hello, flatsense! 🐶';
-
-export const sayHello = (helloText: HelloText) => console.log(helloText);
+export default Client;

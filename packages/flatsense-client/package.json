@@ -8,7 +8,6 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@flatsense/client-api": "*",
     "@flatsense/client-toolkit": "*",
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
