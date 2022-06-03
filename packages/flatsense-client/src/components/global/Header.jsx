@@ -1,12 +1,14 @@
-import React from 'react';
+import React, { useState } from 'react';
 import logo from '../../assets/images/dummy-logo.svg';
 import { Link } from 'react-router-dom';
 
 export default function Header() {
+  const [showMenu, setShowMenu] = useState(false);
+
   return (
     <header>
       <nav className="flex items-center justify-between flex-wrap p-4">
-        <button>
+        <button onClick={() => setShowMenu((prev) => !prev)}>
           <svg
             xmlns="http://www.w3.org/2000/svg"
             className="h-6 w-6"
@@ -18,6 +20,7 @@ export default function Header() {
             <path strokeLinecap="round" strokeLinejoin="round" d="M4 6h16M4 12h16m-7 6h7" />
           </svg>
         </button>
+        {showMenu && <div>나는야 메뉴</div>}
         <div>
           <Link to="/">
             <img className="w-18" src={logo} alt="dummy logo" />
