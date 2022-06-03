@@ -15,9 +15,9 @@ export default function Product() {
       </div>
       <div className="mt-3">
         <div className="border-b border-gray-200 pb-6">
-          <p className="text-sm leading-none text-gray-600 dark:text-gray-300 ">Balenciaga Fall Collection</p>
+          <p className="text-sm leading-none text-gray-600 dark:text-gray-300 ">Shoes</p>
           <h1 className="lg:text-2xl text-xl font-semibold lg:leading-6 leading-7 text-gray-800 dark:text-white mt-2">
-            Balenciaga Signature Sweatshirt
+            Awesome Shoes
           </h1>
         </div>
         <div className="py-4 border-b border-gray-200 flex items-center justify-between">
