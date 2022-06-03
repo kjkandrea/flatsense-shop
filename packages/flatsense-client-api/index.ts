@@ -1,5 +1,5 @@
-import { HelloText } from './types';
+import * as Client from 'shopify-buy';
 
-export const getHelloWord = (): HelloText => 'Hello, flatsense! 🐶';
+const BuildClient = Client.buildClient;
 
-export const sayHello = (helloText: HelloText) => console.log(helloText);
+export default BuildClient;
