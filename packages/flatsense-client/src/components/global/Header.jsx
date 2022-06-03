@@ -5,6 +5,8 @@ import { Link } from 'react-router-dom';
 export default function Header() {
   const [showMenu, setShowMenu] = useState(false);
 
+  const onClickLink = (event) => event.target.tagName === 'A' && setShowMenu(false);
+
   return (
     <header>
       <nav className="flex items-center justify-between flex-wrap p-4">
@@ -16,9 +18,9 @@ export default function Header() {
               fill="none"
               viewBox="0 0 24 24"
               stroke="currentColor"
-              stroke-width="2"
+              strokeWidth="2"
             >
-              <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+              <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
             </svg>
           ) : (
             <svg
@@ -33,7 +35,17 @@ export default function Header() {
             </svg>
           )}
         </button>
-        {showMenu && <div>나는야 메뉴</div>}
+        {showMenu && (
+          <div className="fixed -left-0 top-14 w-full h-screen z-10 bg-gray-50 px-4 md:px-12 py-7">
+            <ul onClick={onClickLink}>
+              <li className="border-b border-gray-200">
+                <Link className="group py-4 text-gray-700 flex items-center justify-between" to="/curation">
+                  Shoes
+                </Link>
+              </li>
+            </ul>
+          </div>
+        )}
         <div>
           <Link to="/">
             <img className="w-18" src={logo} alt="dummy logo" />
