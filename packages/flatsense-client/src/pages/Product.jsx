@@ -14,33 +14,17 @@ export default function Product() {
         </div>
       </div>
       <div className="mt-3">
-        <div className="pb-6">
+        <div className="pb-2">
           <p className="text-sm leading-none text-gray-600 dark:text-gray-300 ">Shoes</p>
           <h1 className="lg:text-2xl text-xl font-semibold lg:leading-6 leading-7 text-gray-800 dark:text-white mt-2">
             Awesome Shoes
           </h1>
         </div>
-        <div className="flex md:block border-b border-gray-200">
+        <div className="flex md:block border-b border-gray-200 pb-6">
           <div className="text-gray-900 text-lg font-semibold mr-2">$600.00</div>
           <div className="text-gray-500 line-through text-lg font-semibold">$649.95</div>
         </div>
-        <div className="py-4 border-b border-gray-200 flex items-center justify-between">
-          <p className="text-base leading-4 text-gray-800 dark:text-gray-300">Size</p>
-          <div className="flex items-center justify-center">
-            <p className="text-sm leading-none text-gray-600 dark:text-gray-300 mr-3">38.2</p>
 
-            <img
-              className="dark:hidden"
-              src="https://tuk-cdn.s3.amazonaws.com/can-uploader/productDetail3-svg2.svg"
-              alt="next"
-            />
-            <img
-              className="hidden dark:block"
-              src="https://tuk-cdn.s3.amazonaws.com/can-uploader/productDetail3-svg2dark.svg"
-              alt="next"
-            />
-          </div>
-        </div>
         <div>
           <p className="xl:pr-48 text-base lg:leading-tight leading-normal text-gray-600 dark:text-gray-300 mt-7">
             It is a long established fact that a reader will be distracted by thereadable content of a page when looking
