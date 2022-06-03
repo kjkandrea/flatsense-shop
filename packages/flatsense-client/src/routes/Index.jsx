@@ -9,7 +9,7 @@ export default [
     element: <Main />,
   },
   {
-    path: '/curation',
+    path: '/curation/:id',
     element: <Curation />,
   },
   {
