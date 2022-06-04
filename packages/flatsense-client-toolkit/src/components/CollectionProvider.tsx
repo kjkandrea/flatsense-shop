@@ -10,10 +10,13 @@ interface CollectionProviderProps {
 export function CollectionProvider({ children }: CollectionProviderProps) {
   const client = useClient();
 
-  const fetch = () => client.collection.fetchAll();
+  const fetch = () => client.collection.fetchWithProducts('gid://shopify/Collection/389242499');
 
   useEffect(() => {
-    fetch().then(console.log);
+    fetch().then((data) => {
+      console.log(data);
+      console.log(data.map(({ title }) => title));
+    });
   }, []);
 
   return <CollectionContext.Provider value={null}>{children}</CollectionContext.Provider>;
