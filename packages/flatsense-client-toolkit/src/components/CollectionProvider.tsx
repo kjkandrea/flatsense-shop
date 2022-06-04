@@ -1,8 +1,8 @@
-import React, { createContext, useEffect, ReactNode } from 'react';
-import { useClient } from '../foundation/useClient';
-import { Collection } from '@flatsense/client-api';
+import React, { createContext, ReactNode } from 'react';
+import { CollectionWithProducts } from '@flatsense/client-api';
+import useCollectionQuery from '../hooks/queries/useCollectionQuery';
 
-export const CollectionContext = createContext<Collection>(null!);
+export const CollectionContext = createContext<CollectionWithProducts>(null!);
 
 interface CollectionProviderProps {
   collectionNo: number;
@@ -10,13 +10,8 @@ interface CollectionProviderProps {
 }
 
 export function CollectionProvider({ collectionNo, children }: CollectionProviderProps) {
-  const client = useClient();
+  const { data } = useCollectionQuery(collectionNo);
 
-  const fetch = () => client.collection.fetchWithProducts(`gid://shopify/Collection/${collectionNo}`);
-
-  useEffect(() => {
-    fetch().then(console.log);
-  }, []);
-
-  return <CollectionContext.Provider value={null as any}>{children}</CollectionContext.Provider>;
+  if (!data) return <></>;
+  return <CollectionContext.Provider value={data}>{children}</CollectionContext.Provider>;
 }
