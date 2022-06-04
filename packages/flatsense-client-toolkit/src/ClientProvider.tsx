@@ -1,9 +1,8 @@
-import React, { createContext } from 'react';
+import React, { createContext, ReactPortal } from 'react';
 import Client from '@flatsense/client-api';
 
-interface ClientProviderProps {
+interface ClientProviderProps extends ReactPortal {
   config: Client.Config;
-  children: React.ReactNode;
 }
 
 export const ClientContext = createContext<Client.Client>(null!);
