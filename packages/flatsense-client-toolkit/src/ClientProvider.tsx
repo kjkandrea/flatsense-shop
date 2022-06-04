@@ -6,9 +6,9 @@ interface ClientProviderProps {
   children: React.ReactNode;
 }
 
-export const ClientContext = createContext<any>(null);
+export const ClientContext = createContext<Client.Client>(null!);
 
-export default function ClientProvider({ config, children }: ClientProviderProps) {
+export function ClientProvider({ config, children }: ClientProviderProps) {
   const api = Client.buildClient(config);
 
   return <ClientContext.Provider value={api}>{children}</ClientContext.Provider>;

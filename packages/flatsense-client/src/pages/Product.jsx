@@ -1,14 +1,10 @@
 import React from 'react';
 import dummyProductThumbnail from '../assets/images/dummy-product-thumbnail.jpeg';
-import { useClient } from '@flatsense/client-toolkit/src/foundation/useClient';
+import { ProductProvider } from '@flatsense/client-toolkit';
 
 export default function Product() {
-  const client = useClient();
-
-  client.product.fetchAll().then(console.log);
-
   return (
-    <>
+    <ProductProvider>
       <div className="items-start justify-center">
         <div>
           <img className="w-full" alt="shoes" src={dummyProductThumbnail} />
@@ -65,6 +61,6 @@ export default function Product() {
           </div>
         </div>
       </div>
-    </>
+    </ProductProvider>
   );
 }

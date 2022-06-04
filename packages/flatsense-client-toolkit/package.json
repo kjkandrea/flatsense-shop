@@ -2,7 +2,7 @@
   "name": "@flatsense/client-toolkit",
   "private": true,
   "version": "0.0.0",
-  "main": "src/CreateClientContext.tsx",
+  "main": "src/index.tsx",
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
