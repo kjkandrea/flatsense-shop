@@ -2,7 +2,7 @@ import React from 'react';
 import { useProduct } from '@flatsense/client-toolkit';
 import dummyProductThumbnail from '../../assets/images/dummy-product-thumbnail.jpeg';
 
-export function ProductDetail() {
+export function ProductView() {
   const product = useProduct();
 
   if (!product) return <></>;

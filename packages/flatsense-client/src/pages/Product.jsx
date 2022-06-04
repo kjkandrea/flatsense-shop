@@ -1,6 +1,6 @@
 import React from 'react';
 import { ProductProvider } from '@flatsense/client-toolkit';
-import { ProductDetail } from '../components/product/ProductDetail';
+import { ProductView } from '../components/product/ProductView';
 import { useParams } from 'react-router-dom';
 
 export default function Product() {
@@ -8,7 +8,7 @@ export default function Product() {
 
   return (
     <ProductProvider productNo={Number(id)}>
-      <ProductDetail />
+      <ProductView />
     </ProductProvider>
   );
 }
