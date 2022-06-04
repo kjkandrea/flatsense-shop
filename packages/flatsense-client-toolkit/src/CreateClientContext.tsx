@@ -1,13 +1,15 @@
+import React, { createContext } from 'react';
 import Client from '@flatsense/client-api';
 
-export default function CreateClientContext(config: Client.Config) {
-  const api = Client.buildClient(config);
-
-  console.log(api);
-
-  return ClientContext;
+interface ClientProviderProps {
+  config: Client.Config;
+  children: React.ReactNode;
 }
 
-function ClientContext() {
-  return <div>hello, build done.</div>;
+export const ClientContext = createContext<any>(null);
+
+export default function ClientProvider({ config, children }: ClientProviderProps) {
+  const api = Client.buildClient(config);
+
+  return <ClientContext.Provider value={api}>{children}</ClientContext.Provider>;
 }
