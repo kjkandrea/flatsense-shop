@@ -9,4 +9,5 @@ export interface CollectionWithProducts {
   description: string;
   products: Product[];
 }
+export type Collection = Client.Collection;
 export type Product = Client.Product;

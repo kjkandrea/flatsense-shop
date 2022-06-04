@@ -13,5 +13,5 @@ export function CollectionProvider({ collectionNo, children }: CollectionProvide
   const { data } = useCollectionQuery(collectionNo);
 
   if (!data) return <></>;
-  return <CollectionContext.Provider value={data}>{children}</CollectionContext.Provider>;
+  return <CollectionContext.Provider value={data as any}>{children}</CollectionContext.Provider>;
 }
