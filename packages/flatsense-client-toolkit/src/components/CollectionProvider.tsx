@@ -15,7 +15,7 @@ export function CollectionProvider({ collectionNo, children }: CollectionProvide
   const fetch = () => client.collection.fetchWithProducts(`gid://shopify/Collection/${collectionNo}`);
 
   useEffect(() => {
-    // fetch().then(console.log);
+    fetch().then(console.log);
   }, []);
 
   return <CollectionContext.Provider value={null as any}>{children}</CollectionContext.Provider>;

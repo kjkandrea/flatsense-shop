@@ -7,7 +7,7 @@ export default function Collection() {
   const { id } = useParams();
 
   return (
-    <CollectionProvider id={id}>
+    <CollectionProvider collectionNo={id}>
       <CollectionView />
     </CollectionProvider>
   );
