@@ -1,12 +1,25 @@
-import React, { createContext } from 'react';
+import React, { createContext, useState, useEffect } from 'react';
 import { useClient } from '../foundation/useClient';
+import Client from '@flatsense/client-api';
 
-export const ProductContext = createContext<any | null>(null);
+export const ProductContext = createContext<Client.Product>(null!);
 
-export function ProductProvider({ children }: { children: React.ReactNode }) {
+interface ProductProviderProps {
+  productNo: number;
+  children: React.ReactNode;
+}
+
+export function ProductProvider({ productNo, children }: ProductProviderProps) {
   const client = useClient();
 
-  client.product.fetchAll().then(console.log);
+  const [product, setProduct] = useState<Client.Product>(null!);
+  const fetch = () => client.product.fetch(`gid://shopify/Product/${productNo}`);
 
-  return <ProductContext.Provider value={null}>{children}</ProductContext.Provider>;
+  useEffect(() => {
+    fetch().then((product) => setProduct(product));
+  }, []);
+
+  if (!product) return <>{children}</>;
+
+  return <ProductContext.Provider value={product}>{children}</ProductContext.Provider>;
 }
