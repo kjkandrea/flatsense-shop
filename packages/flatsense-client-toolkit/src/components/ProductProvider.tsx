@@ -1,11 +1,12 @@
-import React, { createContext, useState, useEffect, ReactPortal } from 'react';
+import React, { createContext, useState, useEffect, ReactNode } from 'react';
 import { useClient } from '../foundation/useClient';
 import Client from '@flatsense/client-api';
 
 export const ProductContext = createContext<Client.Product>(null!);
 
-interface ProductProviderProps extends ReactPortal {
+interface ProductProviderProps {
   productNo: number;
+  children: ReactNode;
 }
 
 export function ProductProvider({ productNo, children }: ProductProviderProps) {
