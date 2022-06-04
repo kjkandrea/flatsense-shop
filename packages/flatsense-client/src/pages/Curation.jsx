@@ -11,7 +11,7 @@ export default function Curation() {
       </div>
       <div className="grid grid-cols-1 gap-y-10 grid-cols-2 gap-x-4">
         {Array.from({ length: 10 }, (_, index) => index).map((key) => (
-          <Link to="/products/1" className="group" key={key}>
+          <Link to="/products/9895276099" className="group" key={key}>
             <div className="w-full aspect-w-1 aspect-h-1 bg-gray-200 rounded-lg overflow-hidden xl:aspect-w-7 xl:aspect-h-8">
               <img
                 src={dummyProductThumbnail}
