@@ -7,7 +7,13 @@ interface ClientProviderProps {
   children: ReactNode;
 }
 
-export const queryClient = new QueryClient();
+export const queryClient = new QueryClient({
+  defaultOptions: {
+    queries: {
+      refetchOnWindowFocus: false,
+    },
+  },
+});
 
 export const ClientContext = createContext<Client.Client>(null!);
 
