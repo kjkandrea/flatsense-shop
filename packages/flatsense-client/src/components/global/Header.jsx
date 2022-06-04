@@ -39,7 +39,7 @@ export default function Header() {
           <div className="fixed -left-0 top-14 w-full h-screen z-10 bg-gray-50 px-4 md:px-12 py-4">
             <ul onClick={onClickLink}>
               <li className="border-b border-gray-200">
-                <Link className="group py-4 text-gray-700 flex items-center justify-between" to="/curation/shoes">
+                <Link className="group py-4 text-gray-700 flex items-center justify-between" to="/collection/389242499">
                   Curation : Shoes
                 </Link>
               </li>
