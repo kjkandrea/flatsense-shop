@@ -9,7 +9,7 @@ export default [
     element: <Main />,
   },
   {
-    path: '/collection/:id',
+    path: '/collections/:id',
     element: <Collection />,
   },
   {

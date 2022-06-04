@@ -1,8 +1,12 @@
 import React, { useState } from 'react';
 import logo from '../../assets/images/dummy-logo.svg';
 import { Link } from 'react-router-dom';
+import { useCollections } from '@flatsense/client-toolkit/src/foundation/useCollections';
 
 export default function Header() {
+  const allCollections = useCollections();
+  const collections = allCollections.filter(({ image }) => image !== null);
+
   const [showMenu, setShowMenu] = useState(false);
 
   const onClickLink = (event) => event.target.tagName === 'A' && setShowMenu(false);
@@ -38,11 +42,18 @@ export default function Header() {
         {showMenu && (
           <div className="fixed -left-0 top-14 w-full h-screen z-10 bg-gray-50 px-4 md:px-12 py-4">
             <ul onClick={onClickLink}>
-              <li className="border-b border-gray-200">
-                <Link className="group py-4 text-gray-700 flex items-center justify-between" to="/collection/389242499">
-                  Curation : Shoes
-                </Link>
-              </li>
+              {collections.length > 0 &&
+                collections.map(({ title, id }) => (
+                  // TODO. to 링크가 이게모야.. 드러워..
+                  <li className="border-b border-gray-200" key={id}>
+                    <Link
+                      className="group py-4 text-gray-700 flex items-center justify-between"
+                      to={`/collections/${id.split('Collection/')[1]}`}
+                    >
+                      {title}
+                    </Link>
+                  </li>
+                ))}
               <li className="border-b border-gray-200">
                 <Link className="group py-4 text-gray-700 flex items-center justify-between" to="/products/9895276099">
                   Awesome Shoes

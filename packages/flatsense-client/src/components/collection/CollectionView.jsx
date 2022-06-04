@@ -16,6 +16,7 @@ export default function CollectionView() {
       </div>
       <div className="grid grid-cols-1 gap-y-10 grid-cols-2 gap-x-4">
         {products.map(({ images, title, id }) => (
+          // TODO. to 링크가 이게모야.. 드러워..
           <Link to={`/products/${id.split('Product/')[1]}`} className="group" key={id}>
             <div className="w-full aspect-w-1 aspect-h-1 bg-gray-200 rounded-lg overflow-hidden xl:aspect-w-7 xl:aspect-h-8">
               <img

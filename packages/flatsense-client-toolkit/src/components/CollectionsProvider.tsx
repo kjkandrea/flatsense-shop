@@ -11,8 +11,6 @@ interface CollectionsProviderProps {
 export function CollectionsProvider({ children }: CollectionsProviderProps) {
   const { data } = useCollectionsQuery();
 
-  console.log(data);
-
   if (!data) return <></>;
   return <CollectionsContext.Provider value={data}>{children}</CollectionsContext.Provider>;
 }
