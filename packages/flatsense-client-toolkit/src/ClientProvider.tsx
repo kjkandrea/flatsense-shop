@@ -1,9 +1,9 @@
 import React, { createContext, ReactNode } from 'react';
-import Client from '@flatsense/client-api';
+import Client, { Config } from '@flatsense/client-api';
 import { QueryClient, QueryClientProvider } from 'react-query';
 
 interface ClientProviderProps {
-  config: Client.Config;
+  config: Config;
   children: ReactNode;
 }
 
