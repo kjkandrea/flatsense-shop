@@ -44,7 +44,7 @@ export default function Header() {
                 </Link>
               </li>
               <li className="border-b border-gray-200">
-                <Link className="group py-4 text-gray-700 flex items-center justify-between" to="/products/1">
+                <Link className="group py-4 text-gray-700 flex items-center justify-between" to="/products/9895276099">
                   Awesome Shoes
                 </Link>
               </li>
