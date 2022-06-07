@@ -23,10 +23,10 @@ function ProductOption({ option }) {
 
   return (
     <div className="mt-8">
-      <h3 className="mb-4 text-xl font-medium text-gray-900">{ name}</h3>
+      <h3 className="mb-4 text-xl font-medium text-gray-900">{name}</h3>
       <div className="flex items-center flex-wrap gap-4">
         {
-          values.map(value => <label htmlFor={`option-${name}-${value}`}>
+          values.map(({ name, value }, index) => <label key={`${value}_${index}`} htmlFor={`option-${name}-${value}`}>
             <input className="sr-only" type="radio" id={`option-${name}-${value}`} name={`option[${name}]`} value={value} />
             <div className="p-2 border cursor-pointer rounded text-sm md:text-md text-gray-900">{value}</div>
           </label>)
@@ -41,7 +41,7 @@ export function ProductDetail() {
   if (!product) return <></>;
 
   const { images, productType, title, options, description } = product;
-  
+
   return (
     <div className="items-start justify-center">
       <ProductThumbnail images={ images} />
@@ -57,10 +57,9 @@ export function ProductDetail() {
           <div className="text-gray-500 line-through text-lg font-semibold">$110</div>
         </div>
         {
-          options.map(option => <ProductOption key={option.name} option={ option} />)
+          options.map((option) => <ProductOption key={`${option.id}`} option={option} />)
         }
         
-
         <div className="text-base leading-4 mt-7 text-gray-600 dark:text-gray-300" dangerouslySetInnerHTML={{'__html': description}}>
         </div>
       </div>
