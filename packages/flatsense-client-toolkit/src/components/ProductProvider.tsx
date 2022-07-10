@@ -1,8 +1,8 @@
-import React, { createContext, useState, useEffect, ReactNode } from 'react';
-import { useClient } from '../foundation/useClient';
-import Client from '@flatsense/client-api';
+import React, { createContext, ReactNode } from 'react';
+import { Product } from '@flatsense/client-api';
+import useProductQuery from '../hooks/queries/useProductQuery';
 
-export const ProductContext = createContext<Client.Product>(null!);
+export const ProductContext = createContext<Product>(null!);
 
 interface ProductProviderProps {
   productNo: number;
@@ -10,16 +10,9 @@ interface ProductProviderProps {
 }
 
 export function ProductProvider({ productNo, children }: ProductProviderProps) {
-  const client = useClient();
+  const { data } = useProductQuery(productNo);
 
-  const [product, setProduct] = useState<Client.Product>(null!);
-  const fetch = () => client.product.fetch(`gid://shopify/Product/${productNo}`);
+  if (!data) return <>{children}</>;
 
-  useEffect(() => {
-    fetch().then((product) => setProduct(product));
-  }, []);
-
-  if (!product) return <>{children}</>;
-
-  return <ProductContext.Provider value={product}>{children}</ProductContext.Provider>;
+  return <ProductContext.Provider value={data}>{children}</ProductContext.Provider>;
 }

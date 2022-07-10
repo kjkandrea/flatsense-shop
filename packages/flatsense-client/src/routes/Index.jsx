@@ -1,7 +1,7 @@
 import Main from '../pages/Main';
 import Product from '../pages/Product';
 import NotFound from '../pages/NotFound';
-import Curation from '../pages/Curation';
+import Collection from '../pages/Collection';
 
 export default [
   {
@@ -9,8 +9,8 @@ export default [
     element: <Main />,
   },
   {
-    path: '/curation/:id',
-    element: <Curation />,
+    path: '/collections/:id',
+    element: <Collection />,
   },
   {
     path: '/products/:id',
